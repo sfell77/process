@@ -30,5 +30,5 @@ Your Cloudfront distribution must exist before associating a certificate with it
     - `<domain_com>-rsa-private-key.pem` (step 8)
 10. Deploying to AWS IAM
     - Run the below ensuring that the date provided is the **expiration date**:
-        - `aws iam upload-server-certificate --server-certificate-name <domain>_Mmm_YYYY --certificate-body file://<domain_com>-cert.pem --certificate _chain file://<domain_com>-chain.pem --private-key file://<domain_com>-rsa-private-key.pem --path /cloudfront<distributionID>/`
+        - `aws iam upload-server-certificate --server-certificate-name <domain>_Mmm_YYYY --certificate-body file://<domain_com>-cert.pem --certificate _chain file://<domain_com>-chain.pem --private-key file://<domain_com>-rsa-private-key.pem --path /cloudfront/<distributionID>/`
 11. Update Cloudfront distriution to use the new certificate; validate E2E: https://www.digicert.com/help
