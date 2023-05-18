@@ -1,5 +1,7 @@
 ### Cloudfront certificate mgmt
 Your Cloudfront distribution must exist before associating a certificate with it
+CSR: Certificate signing request
+JKS: Java key store
 
 1. Create the CSR through your cert vendor (using DigiCert as example): http://www.digicert.com/easy-csr/keytool.htm
 2. Provide requested values; `Common name` is the domain name and key size should be `RSA 2048`
